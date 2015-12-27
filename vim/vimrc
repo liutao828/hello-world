@@ -1,0 +1,132 @@
+call pathogen#infect()
+
+"""""""""indentLine"""""""""""""
+" Vim
+let g:indentLine_color_term = 239
+
+"GVim
+let g:indentLine_color_gui = '#A4E57E'
+
+" none X terminal
+let g:indentLine_color_tty_light = 7 " (default: 4)
+let g:indentLine_color_dark = 1 " (default: 2)
+
+""Change Indent Char
+"¦, ┆, ︙ or │
+let g:indentLine_char = '|'
+
+""Disable by default
+let g:indentLine_enabled = 1
+
+map <F6> : IndentLinesToggle<CR>
+
+""""""""""""""""""""""""""""""""
+
+set mouse=a
+
+set list lcs=tab:\|\ 
+
+"显示行号
+set number
+
+"检测文件的类型
+filetype on
+
+"记录历史的行数
+set history=1000
+
+"自动对齐
+set autoindent
+set cindent
+
+"智能选择对齐方式
+set smartindent
+
+"tab为4个空格
+set tabstop=4
+
+"turn tab to space
+set expandtab
+
+"当前行之间交错时使用4个空格
+set shiftwidth=4
+
+"设置匹配模式，输入做括号会出现右括号
+set showmatch
+
+"编辑时显示光标状态
+set ruler
+
+"当前行高亮
+set cursorline
+"hi CursorLine cterm=NONE ctermbg=NONE ctermfg=magenta guibg=NONE guifg=NONE
+"hi CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+
+"快速匹配
+set incsearch
+set hlsearch
+
+"修改文件自动备份
+if has("vms")
+    set nobackup
+"else
+"    set backup
+endif
+
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
+"inoremap < <><ESC>i
+inoremap " ""<ESC>i
+inoremap ' ''<ESC>i
+
+""调整窗口大小快捷键
+nmap    r-  :resize -20<CR>
+nmap    r=  :resize +20<CR>
+nmap    r,  :vertical resize -20<CR>
+nmap    r.  :vertical resize +20<CR>
+
+"""""""""""""设置开启ctags"""""""""""""
+"在这设置ctags -R 后生成的tags文件所在目录，下面有介绍，如果需要配置多个tags。只需如下再添加即可
+set tags=tags;
+set tags+=/home/liutao/work/extundelete-0.2.4/src/tags;
+set tags+=/home/liutao/work/github/linux-stable/tags,/home/liutao/work/rstplib/tags
+set autochdir
+
+map <F4> : tp<CR>  ""上一个tag""
+map <F5> : tn<CR>  ""下一个tag""
+
+map <F10> %
+map <F2> \m
+
+map <F9> <C-]>
+map <F8> <C-T>
+
+"""""""""""""""设置tagbar"""""""""""""""
+nmap <F3> :TagbarToggle<CR>   "设置快捷键
+let g:tagbar_width = 35       "设置宽度，默认为40
+""autocmd VimEnter * nested :call tagbar#autoopen(1)    "打开vim时自动打开tagbar
+let g:tagbar_left = 1         "在左侧
+"let g:tagbar_right = 1        "在右侧
+
+"""""""""""""""""Taglist设置"""""""""""""""""
+"map <F3> : TlistToggle<CR>  ""按下F3就可以呼出了""
+""let Tlist_Auto_Open = 1 
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
+
+
+""""""""""""""""""""""cscope设置""""""""""""""""""
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+if has("cscope")
+set csprg=/usr/bin/cscope
+set csto=1
+set cst
+set nocsverb
+" add any database in current directory
+if filereadable("cscope.out")
+cs add cscope.out
+endif
+set csverb
+endif
