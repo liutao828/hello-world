@@ -1,5 +1,23 @@
 call pathogen#infect()
 
+highlight DiffAdd cterm=bold ctermfg=4 ctermbg=7 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=12 ctermbg=7gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=12 ctermbg=7 gui=none guifg=bg guibg=Red
+highlight DiffText cterm=bold ctermfg=12 ctermbg=7 gui=none guifg=bg guibg=Red
+
+hi Comment      guifg=#80a0ff ctermfg=darkblue
+hi Constant     ctermfg=magenta guifg=#ffa0a0 cterm=none
+hi Special      ctermfg=brown guifg=Orange cterm=none gui=none
+hi Identifier   ctermfg=cyan guifg=#40ffff cterm=none
+hi Statement    ctermfg=yellow cterm=none guifg=#ffff60 gui=none
+hi PreProc      ctermfg=magenta guifg=#ff80ff gui=none cterm=none
+hi type         ctermfg=green guifg=#60ff60 gui=none cterm=none
+hi Underlined   cterm=underline term=underline
+hi Ignore       guifg=#80a0ff ctermfg=darkblue
+
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1 
+
 """""""""indentLine"""""""""""""
 " Vim
 let g:indentLine_color_term = 239
@@ -26,6 +44,9 @@ set mouse=a
 
 set list lcs=tab:\|\ 
 
+"自动换行
+set wrap
+
 "显示行号
 set number
 
@@ -34,6 +55,10 @@ filetype on
 
 "记录历史的行数
 set history=1000
+
+"set noautoindent
+"set nosmartindent
+"set nocindent
 
 "自动对齐
 set autoindent
