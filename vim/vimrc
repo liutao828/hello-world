@@ -118,8 +118,8 @@ set tags+=/home/liutao/work/extundelete-0.2.4/src/tags;
 set tags+=/home/liutao/work/github/linux-stable/tags,/home/liutao/work/rstplib/tags
 set autochdir
 
-map <F4> : tp<CR>  ""上一个tag""
-map <F5> : tn<CR>  ""下一个tag""
+""map <F4> : tp<CR>  ""上一个tag""
+""map <F5> : tn<CR>  ""下一个tag""
 
 map <F10> %
 map <F2> \m
@@ -141,6 +141,10 @@ let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 
+"""""""""""""""""NERDtree"""""""""""""""""
+map <F4> : NERDTreeToggle<CR>
+let NERDTreeWinPos="right"
+let NERDTreeShowBookmarks=1
 
 """"""""""""""""""""""cscope设置""""""""""""""""""
 set cscopequickfix=s-,c-,d-,i-,t-,e-
