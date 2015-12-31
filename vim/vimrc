@@ -36,7 +36,7 @@ let g:indentLine_char = '|'
 ""Disable by default
 let g:indentLine_enabled = 1
 
-map <F6> : IndentLinesToggle<CR>
+map <F5> : IndentLinesToggle<CR>
 
 """"""""""""""""""""""""""""""""
 
@@ -106,10 +106,10 @@ inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
 
 ""调整窗口大小快捷键
-nmap    r-  :resize -20<CR>
-nmap    r=  :resize +20<CR>
-nmap    r,  :vertical resize -20<CR>
-nmap    r.  :vertical resize +20<CR>
+nmap    r-  :resize -10<CR>
+nmap    r=  :resize +10<CR>
+nmap    r,  :vertical resize -10<CR>
+nmap    r.  :vertical resize +10<CR>
 
 """""""""""""设置开启ctags"""""""""""""
 "在这设置ctags -R 后生成的tags文件所在目录，下面有介绍，如果需要配置多个tags。只需如下再添加即可
@@ -118,8 +118,8 @@ set tags+=/home/liutao/work/extundelete-0.2.4/src/tags;
 set tags+=/home/liutao/work/github/linux-stable/tags,/home/liutao/work/rstplib/tags
 set autochdir
 
-""map <F4> : tp<CR>  ""上一个tag""
-""map <F5> : tn<CR>  ""下一个tag""
+map <F6> [c  ""上一个diff""
+map <F7> ]c  ""下一个diff""
 
 map <F10> %
 map <F2> \m
