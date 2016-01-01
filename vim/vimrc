@@ -129,10 +129,11 @@ map <F8> <C-T>
 
 """""""""""""""设置tagbar"""""""""""""""
 nmap <F3> :TagbarToggle<CR>   "设置快捷键
-let g:tagbar_width = 35       "设置宽度，默认为40
+let g:tagbar_width = 25       "设置宽度，默认为40
 ""autocmd VimEnter * nested :call tagbar#autoopen(1)    "打开vim时自动打开tagbar
 let g:tagbar_left = 1         "在左侧
 "let g:tagbar_right = 1        "在右侧
+let g:tagbar_sort = 0           "不按name排序
 
 """""""""""""""""Taglist设置"""""""""""""""""
 "map <F3> : TlistToggle<CR>  ""按下F3就可以呼出了""
