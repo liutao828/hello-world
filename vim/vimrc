@@ -17,7 +17,18 @@ hi Ignore       guifg=#80a0ff ctermfg=darkblue
 
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1 
-
+if has("win32")
+    set fileencoding=chinese
+    "解决菜单乱码
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+    "解决console输出乱码
+    language messages zh_CN.utf-8
+    set guifont=Consolas:h11:cANSI
+else
+    set fileencoding=utf-8
+endif
+    
 """""""""indentLine"""""""""""""
 " Vim
 let g:indentLine_color_term = 239
