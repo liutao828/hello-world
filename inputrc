@@ -1,0 +1,27 @@
+$if bash
+   set keymap emacs
+   "\C-p": history-search-backward
+   "\C-n": history-search-forward
+   "\e[A": history-search-backward
+   "\e[B": history-search-forward
+   set keymap vi
+   "\C-p": history-search-backward
+   "\C-n": history-search-forward
+   "\C-k": kill-line
+   "k": history-search-backward
+   "j": history-search-forward
+   "K": previous-history
+   "J": next-history
+   "\e[A": previous-history
+   "\e[B": next-history
+   set keymap vi-insert
+   "\C-p": history-search-backward
+   "\C-n": history-search-forward
+   "\e[A": history-search-backward
+   "\e[B": history-search-forward
+   "\C-k": kill-line
+   "\C-l": forward-char
+   "\C-ol": forward-char
+   "\C-oh": backward-char
+   "\C-o\C-l": clear-screen
+$endif
