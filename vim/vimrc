@@ -58,6 +58,9 @@ syntax on
 set mouse=a
 
 set list lcs=tab:\|\ 
+"设置折叠
+set fdm=indent
+"set fdm=marker
 
 "自动换行
 set wrap
