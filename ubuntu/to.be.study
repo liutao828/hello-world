@@ -1,0 +1,9 @@
+tcpdump
+nmap
+sqlite3
+wget
+dmidecode biosdecode
+
+gpg openssl
+rsync
+git
