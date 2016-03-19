@@ -1,0 +1,9 @@
+:split
+:vsplit
+:edit
+vimdiff
+
+`` ''
+CTRL-O
+CTRL-I
+
