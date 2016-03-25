@@ -137,10 +137,12 @@ set tags+=/home/liutao/work/github/linux-stable/tags,/home/liutao/work/rstplib/t
 set autochdir
 
 map 1 $
+map 2 %
+
 map <F6> [c  ""上一个diff""
 map <F7> ]c  ""下一个diff""
 
-map <F10> %
+let g:pep8_map='<F10>'
 map <F2> \m
 
 map <F9> <C-]>
