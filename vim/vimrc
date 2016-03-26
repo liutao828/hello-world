@@ -136,8 +136,9 @@ set tags+=/home/liutao/work/extundelete-0.2.4/src/tags;
 set tags+=/home/liutao/work/github/linux-stable/tags,/home/liutao/work/rstplib/tags
 set autochdir
 
-map 1 $
-map 2 %
+map 1 0
+map 2 $
+map 3 %
 
 map <F6> [c  ""上一个diff""
 map <F7> ]c  ""下一个diff""
