@@ -55,11 +55,11 @@ let g:indentLine_enabled = 1
 """"""""""""""""""""""""""""""""
 "set nocompatible
 syntax on
-set mouse=a
+"set mouse=a
 
 set list lcs=tab:\|\ 
 "设置折叠
-set fdm=indent
+"set fdm=indent
 "set fdm=marker
 
 "自动换行
@@ -79,11 +79,11 @@ set history=1000
 "set nocindent
 
 "自动对齐
-set autoindent
+"set autoindent
 set cindent
 
 "智能选择对齐方式
-set smartindent
+"set smartindent
 
 "tab为4个空格
 set tabstop=4
@@ -120,8 +120,8 @@ inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
 "inoremap < <><ESC>i
-inoremap " ""<ESC>i
-inoremap ' ''<ESC>i
+"inoremap " ""<ESC>i
+"inoremap ' ''<ESC>i
 
 ""调整窗口大小快捷键
 nmap    r-  :resize -10<CR>
@@ -136,9 +136,9 @@ set tags+=/home/liutao/work/extundelete-0.2.4/src/tags;
 set tags+=/home/liutao/work/github/linux-stable/tags,/home/liutao/work/rstplib/tags
 set autochdir
 
-map 1 0
-map 2 $
-map 3 %
+map 7 0
+map 8 $
+map 9 %
 
 map <F6> [c  ""上一个diff""
 map <F7> ]c  ""下一个diff""
