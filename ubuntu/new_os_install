@@ -1,0 +1,22 @@
+#!/bin/bash
+sudo apt-get install smplayer vlc audacious vim ctags git tree htop nload iftop ipython python-pip
+sudo pip install shadowsocks
+
+#machine learning
+sudo apt-get install python-numpy python-scipy python-matplotlib python-sklearn python-networkx
+#sudo apt-get install python-pandas python-sympy python-nose
+
+#dock 
+
+#tweak
+#synaptic
+#deluge
+#gnome-shell
+#kde-full
+#nmap
+#sysv-rc-conf
+#sqlite3
+#iptraf
+#fping
+#lftp
+#indent
