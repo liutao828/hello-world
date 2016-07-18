@@ -32,6 +32,12 @@ else
     set fileencoding=utf-8
 endif
     
+" Uncomment the following to have Vim jump to the last position when
+" " reopening a file
+if has("autocmd")
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 """""""""indentLine"""""""""""""
 " Vim
 let g:indentLine_color_term = 239
