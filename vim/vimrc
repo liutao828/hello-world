@@ -107,7 +107,7 @@ set showmatch
 set ruler
 
 "当前行高亮
-set cursorline
+"set cursorline
 "hi CursorLine cterm=NONE ctermbg=NONE ctermfg=magenta guibg=NONE guifg=NONE
 "hi CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 
@@ -150,7 +150,8 @@ map <F6> [c  ""上一个diff""
 map <F7> ]c  ""下一个diff""
 
 let g:pep8_map='<F10>'
-map <F2> \m
+let mapleader = ","
+map <F2> ,m
 
 map <F9> <C-]>
 map <F8> <C-T>
