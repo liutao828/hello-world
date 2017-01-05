@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get install smplayer vlc audacious vim ctags git tree htop nload iftop ipython python-pip
-sudo pip install silversearcher-ag
+sudo apt-get install silversearcher-ag
 sudo pip install shadowsocks
 
 #machine learning
