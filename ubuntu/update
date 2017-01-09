@@ -5,4 +5,4 @@ sudo apt-get dist-upgrade
 
 sleep 1
 
-~/autoclean
+./autoclean
