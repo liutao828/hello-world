@@ -1,0 +1,14 @@
+[alias]
+	lg = log --name-status --pretty=format:'%Cred%H%Creset @%C(yellow)%d%Creset %n Author: %cn <%ce> %n Date: %cd %Cblue(%cr)%Creset %n %n Commit subject: %Cgreen%s%Creset %n'
+	d = difftool
+	st = status -s
+	ci = commit
+	co = checkout
+	br = branch
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[user]
+	name = liutao828
+	email = liutao828@qq.com
