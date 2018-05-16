@@ -12,3 +12,9 @@
 [user]
 	name = liutao828
 	email = liutao828@qq.com
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
+[core]
+	editor = vim
