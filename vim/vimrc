@@ -45,7 +45,24 @@ endif
 
 " git mergetool use vimdiff
 set laststatus=2 "show the status line
-set statusline=%-10.3n  "buffer number
+set statusline=
+set statusline+=\[%n]                                  "buffernr
+set statusline+=\ %<%F\                                "文件路径
+set statusline+=\ %y\                                  "文件类型
+set statusline+=\ %{''.(&fenc!=''?&fenc:&enc).''}      "编码1
+set statusline+=\ %{(&bomb?\",BOM\":\"\")}\            "编码2
+set statusline+=\ %{&ff}\                              "文件系统(dos/unix..)
+set statusline+=\ %{&spelllang}\%{HighlightSearch()}\  "语言 & 是否高亮，H表示高亮?
+set statusline+=\ %=\ row:%l/%L\ (%03p%%)\             "光标所在行号/总行数 (百分比)
+set statusline+=\ col:%03c\                            "光标所在列
+set statusline+=\ \ %m%r%w\ %P\ \                      "Modified? Read only? Top/bottom
+function! HighlightSearch()
+    if &hls
+        return 'H'
+    else
+        return ''
+    endif
+endfunction
 
 "map <silent> <leader>1 :diffget 1<CR> :diffupdate<CR>
 "map <silent> <leader>2 :diffget 2<CR> :diffupdate<CR>
