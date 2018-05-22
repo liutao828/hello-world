@@ -1,0 +1,4 @@
+#!/bin/sh
+#/sbin/ifconfig $1 10.28.67.61 netmask 255.255.0.0 up
+/sbin/ifconfig $1 up
+sleep 2
