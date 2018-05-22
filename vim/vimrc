@@ -151,6 +151,11 @@ set ruler
 set incsearch
 set hlsearch
 
+"设置python配置
+if has("autocmd")
+autocmd FileType python set tabstop=4 | set expandtab | set shiftwidth=4 | set autoindent
+endif
+
 "修改文件自动备份
 if has("vms")
     set nobackup
