@@ -1,5 +1,8 @@
 [alias]
 	lg = log --name-status --pretty=format:'%Cred%H%Creset @%C(yellow)%d%Creset %n Author: %cn <%ce> %n Date: %cd %Cblue(%cr)%Creset %n %n Commit subject: %Cgreen%s%Creset %n'
+	lgv = log --name-status --pretty=format:'%Cred%H%Creset @%C(yellow)%d%Creset %n Author: %cn <%ce> %n Date: %cd %Cblue(%cr)%Creset %n %n Commit subject: %Cgreen%s%Creset %n' -5
+	logv = log --oneline -5
+	logx = log --oneline -10
 	d = difftool
 	st = status -s
 	ci = commit
