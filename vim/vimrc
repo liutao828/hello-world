@@ -49,11 +49,12 @@ set statusline=
 set statusline+=\[%n]                                  "buffernr
 set statusline+=\ %<%F\                                "文件路径
 set statusline+=\ %y\                                  "文件类型
-set statusline+=\ %{''.(&fenc!=''?&fenc:&enc).''}      "编码1
-set statusline+=\ %{(&bomb?\",BOM\":\"\")}\            "编码2
-set statusline+=\ %{&ff}\                              "文件系统(dos/unix..)
-set statusline+=\ %{&spelllang}\%{HighlightSearch()}\  "语言 & 是否高亮，H表示高亮?
-set statusline+=\ %=\ row:%l/%L\ (%03p%%)\             "光标所在行号/总行数 (百分比)
+"set statusline+=\ %{''.(&fenc!=''?&fenc:&enc).''}      "编码1
+"set statusline+=\ %{(&bomb?\",BOM\":\"\")}\            "编码2
+"set statusline+=\ %{&ff}\                              "文件系统(dos/unix..)
+"set statusline+=\ %{&spelllang}\%{HighlightSearch()}\  "语言 & 是否高亮，H表示高亮?
+"set statusline+=\ %=\ row:%l/%L\ (%03p%%)\             "光标所在行号/总行数 (百分比)
+set statusline+=\ %=\ row:%l/%L\              "光标所在行号/总行数 (百分比)
 set statusline+=\ col:%03c\                            "光标所在列
 set statusline+=\ \ %m%r%w\ %P\ \                      "Modified? Read only? Top/bottom
 function! HighlightSearch()
@@ -111,8 +112,8 @@ set wrap
 set textwidth=80
 "从窗口右侧向左数的列数来自动换行,如果 textwidth 选项不等于零，本选项无效。
 set wrapmargin=2
-"使光标距窗口上下保留 5 行
-set scrolloff=5
+"使光标距窗口上下保留 2 行
+set scrolloff=1
 
 "显示行号
 set number
