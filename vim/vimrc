@@ -109,7 +109,7 @@ set list lcs=tab:\|\
 set wrap
 
 "文本行超过一定长度时自动换行
-set textwidth=80
+set textwidth=78
 "从窗口右侧向左数的列数来自动换行,如果 textwidth 选项不等于零，本选项无效。
 set wrapmargin=2
 "使光标距窗口上下保留 2 行
@@ -172,7 +172,7 @@ if has("vms")
 endif
 
 "禁止创建.swp文件
-set noswapfile
+"set noswapfile
 
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
@@ -214,7 +214,7 @@ let g:mwDefaultHighlightingPalette = 'extended'
 "let g:mwDefaultHighlightingNum = 12
 map <F2> ,m
 
-map <F9> <C-]>
+map <F9> <C-]>j
 map <F8> <C-T>
 
 nmap <C-H> <C-W>h
