@@ -1,13 +1,16 @@
 [alias]
 	lg = log --name-status --pretty=format:'%Cred%H%Creset @%C(yellow)%d%Creset %n Author: %cn <%ce> %n Date: %cd %Cblue(%cr)%Creset %n %n Commit subject: %Cgreen%s%Creset %n'
 	lgv = log --name-status --pretty=format:'%Cred%H%Creset @%C(yellow)%d%Creset %n Author: %cn <%ce> %n Date: %cd %Cblue(%cr)%Creset %n %n Commit subject: %Cgreen%s%Creset %n' -5
+	logi = log --oneline
 	logv = log --oneline -5
 	logx = log --oneline -10
+	logf = log --name-status
 	d = difftool
 	st = status -s
 	ci = commit
 	co = checkout
-	br = branch
+	br = branch -v
+	cp = cherry-pick -s
 [diff]
 	tool = vimdiff
 [difftool]
@@ -15,6 +18,14 @@
 [user]
 	name = liutao828
 	email = liutao828@qq.com
+[sendemail]
+	from = Tao Liu <tao.liu@xxx.cn>
+	smtpserver = smtp.xxx.com
+	smtpuser = tao.liu@xxx.cn
+	smtpencryption = ssl
+	smtppass = PASSWORD
+	chainreplyto = false
+	smtpserverport = 465
 [merge]
 	tool = vimdiff
 [mergetool]
