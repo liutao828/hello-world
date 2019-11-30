@@ -172,7 +172,7 @@ if has("vms")
 endif
 
 "禁止创建.swp文件
-"set noswapfile
+set noswapfile
 
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
@@ -269,10 +269,10 @@ let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ."
 
 """""""""""""""设置tagbar"""""""""""""""
 nmap <F3> :TagbarToggle<CR>   "设置快捷键
-let g:tagbar_width = 25       "设置宽度，默认为40
+let g:tagbar_width = 30       "设置宽度，默认为40
 autocmd VimEnter * nested :call tagbar#autoopen(1)    "打开vim时自动打开tagbar
-"let g:tagbar_left = 1         "在左侧
-let g:tagbar_right = 1        "在右侧
+let g:tagbar_left = 1         "在左侧
+"let g:tagbar_right = 1        "在右侧
 let g:tagbar_sort = 0           "不按name排序
 
 """""""""""""""""Taglist设置"""""""""""""""""
@@ -290,13 +290,13 @@ let NERDTreeShowBookmarks=1
 """"""""""""""""""""""cscope设置""""""""""""""""""
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 if has("cscope")
-set csprg=/usr/bin/cscope
-set csto=1
-set cst
-set nocsverb
-" add any database in current directory
-if filereadable("cscope.out")
-cs add cscope.out
-endif
-set csverb
+	set csprg=/usr/bin/cscope
+	set csto=1
+	set cst
+	set nocsverb
+	" add any database in current directory
+	if filereadable("cscope.out")
+		cs add cscope.out
+	endif
+	set csverb
 endif
