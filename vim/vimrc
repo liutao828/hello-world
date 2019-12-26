@@ -15,6 +15,11 @@ hi type         ctermfg=green guifg=#60ff60 gui=none cterm=none
 hi Underlined   cterm=underline term=underline
 hi Ignore       guifg=#80a0ff ctermfg=darkblue
 
+" search hilight: yellow => red
+hi Search term=standout cterm=bold ctermfg=7 ctermbg=1
+" cscope tags: white => green
+hi ModeMsg ctermfg=magenta
+
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 if has("win32")
@@ -95,7 +100,7 @@ let g:indentLine_enabled = 1
 "map <F5> : IndentLinesToggle<CR>
 
 """"""""""""""""""""""""""""""""
-"set nocompatible
+set nocompatible
 syntax on
 "set mouse=a
 "set cc=80
@@ -303,12 +308,14 @@ if has("cscope")
 	endif
 	set csverb
 
-	nmap <F9>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
-	nmap <F9>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
-	nmap <F9>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
-	nmap <F9>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
-	nmap <F9>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
-	nmap <F9>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
-	nmap <F9>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-	nmap <F9>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
+	nmap <F9> :cs find g <C-R>=expand("<cword>")<CR><CR>
+
+	nmap <F10>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+	nmap <F10>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+	nmap <F10>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+	nmap <F10>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+	nmap <F10>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+	nmap <F10>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+	nmap <F10>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+	nmap <F10>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 endif

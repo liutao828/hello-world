@@ -9,7 +9,8 @@ deluge
 #gnome-shell
 #kde-full
 
-vim ctags
+tmux git tig vim ctags cscope
+w3m
 tree
 nmap
 sysv-rc-conf
