@@ -9,10 +9,26 @@ alias lz='ll -rS'                   # sort by size
 alias lt='ll -rt'                   # sort by date
 alias lm='la | more'
 
+alias dirs='dirs -v'
+alias p1='pushd +1'
+alias p2='pushd +2'
+alias p3='pushd +3'
+alias p4='pushd +4'
+alias p5='pushd +5'
+alias p6='pushd +6'
+alias p7='pushd +7'
+alias p8='pushd +8'
+alias p9='pushd +9'
+
 #alias vi='vim'
 alias ..='cd ..'
 alias grep='grep --color'
 
 alias show="ps -ef | grep "
+alias www="w3m -num -B"
 
 alias rm="/home/liutao/bin/remove.sh"
+
+# add time to prompt
+#PS1='[\u@\h \t \W]\$'
+PS1='[\[\033[01;32m\]\u@\[\033[01;34m\]\t \W\033[00m\]\$ '
