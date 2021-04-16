@@ -1,0 +1,33 @@
+export CLICOLOR=1
+#export LSCOLORS=1212121212121212121212
+export LSCOLORS=bxfxhxhxgxhxhxgxgxbxbx 
+
+export PATH=/opt/homebrew/bin:$PATH
+
+alias ls='ls -hF'
+alias la='ls -a'
+alias l='ls -CF'
+alias lh='ls -CFlh'
+
+alias lx='ll -BX'                   # sort by extension
+alias lz='ll -rS'                   # sort by size
+alias lt='ll -rt'                   # sort by date
+alias lm='la | more'
+
+alias dirs='dirs -v'
+alias p1='pushd +1'
+alias p2='pushd +2'
+alias p3='pushd +3'
+alias p4='pushd +4'
+alias p5='pushd +5'
+alias p6='pushd +6'
+alias p7='pushd +7'
+alias p8='pushd +8'
+alias p9='pushd +9'
+
+#alias vi='vim'
+#alias ..='cd ..'
+alias grep='grep --color'
+
+alias show="ps -ef | grep "
+alias www="w3m -num -B"
