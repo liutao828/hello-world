@@ -102,7 +102,17 @@ let g:indentLine_enabled = 1
 """"""""""""""""""""""""""""""""
 set nocompatible
 syntax on
-"set mouse=a
+
+nnoremap <F5> :call MouseToggle()<CR>
+function! MouseToggle()
+	if &mouse == ""
+		let &mouse="a"
+	else
+		let &mouse=""
+	endif
+endfunction
+set mouse=a
+
 "set cc=80
 
 set list lcs=tab:\|\ 
@@ -156,7 +166,7 @@ set showmatch
 set ruler
 
 "当前行高亮
-"set cursorline
+set cursorline
 "hi CursorLine cterm=NONE ctermbg=NONE ctermfg=magenta guibg=NONE guifg=NONE
 "hi CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 
